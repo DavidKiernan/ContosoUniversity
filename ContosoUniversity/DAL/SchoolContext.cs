@@ -9,6 +9,8 @@ namespace ContosoUniversity.DAL
 
         public SchoolContext() : base("SchoolContext")
         {
+          // Comment out to ensure program works correctly
+          //this.Configuration.LazyLoadingEnabled = false; //Disables lazy loading for all Nav properties
         }
 
 

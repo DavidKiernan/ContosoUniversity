@@ -28,6 +28,7 @@ namespace ContosoUniversity.Models
                 return LastName + ", " + FirstMidName;
             }
         }
+
         public virtual ICollection<Enrollment> Enrollments { get; set; } // Nav Property, hold other entities that are related to this entity.
                                                                          // Nav properties are typically defined as virtual so that they can take advantage of certain EF functionality such as lazy loading. 
     }
