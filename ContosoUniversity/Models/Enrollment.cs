@@ -1,4 +1,5 @@
-﻿namespace ContosoUniversity.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace ContosoUniversity.Models
 {
     public enum Grade
     {
@@ -10,6 +11,7 @@
         public int EnrollmentID { get; set; } // PK uses "classname" ID pattern
         public int CourseID { get; set; } // FK
         public int StudentID { get; set; }
+        [DisplayFormat(NullDisplayText = "No grade")]
         public Grade? Grade { get; set; } // The "?" indicates Grade propery is nullable ( isn't known or hasn't been assigned yet)
 
         public virtual Course Course { get; set; }
