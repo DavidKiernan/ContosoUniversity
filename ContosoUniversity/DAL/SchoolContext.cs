@@ -13,7 +13,7 @@ namespace ContosoUniversity.DAL
           //this.Configuration.LazyLoadingEnabled = false; //Disables lazy loading for all Nav properties
         }
 
-
+        public DbSet<Person> People { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
