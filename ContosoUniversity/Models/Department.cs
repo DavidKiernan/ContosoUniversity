@@ -17,12 +17,14 @@ namespace ContosoUniversity.Models
         public decimal Budget { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MMM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
 
         public int? InstructorID { get; set; }
 
+        [Timestamp] // ttribute specifies that this column will be included in the Where clause of Update and Delete commands sent to the database.
+        public byte[] RowVersion { get; set; }
         public virtual Instructor Administrator { get; set; }
         public virtual ICollection<Course> Courses { get; set; }
     }
