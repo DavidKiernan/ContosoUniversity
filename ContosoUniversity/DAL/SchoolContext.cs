@@ -30,6 +30,7 @@ namespace ContosoUniversity.DAL
              .Map(t => t.MapLeftKey("CourseID")
                  .MapRightKey("InstructorID")
                  .ToTable("CourseInstructor"));
+            modelBuilder.Entity<Department>().MapToStoredProcedures(); //This code instructs Entity Framework to use stored procedures for insert, update, and delete operations on the Department entity.
         }
     }
 }
